@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body-wrapper {
     background-color: #f8f8f8;
     color: #333;
     font-family: Lato, sans-serif;
@@ -32,7 +32,8 @@ body {
     margin: 0 auto 0;
 }
 
-.task {
+.input-task,
+.label-task {
     width: 56%;
     display: inline-block;
     flex-grow: 1
@@ -42,22 +43,26 @@ body {
     display: flex;
 }
 
-ul {
+.todo-task,
+.compleate-task {
     margin: 0;
     padding: 0px;
 }
 
-li,
-h3 {
+.todo-task__list,
+.compleate-task__list {
     list-style: none;
 }
 
 input,
-button {
+.edit,
+.delete {
     outline: none;
 }
 
-button {
+.add-task__btn,
+.edit,
+.delete {
     background: none;
     border: 0px;
     color: #888;
@@ -67,7 +72,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.add-task__btn:hover,
+.edit:hover {
     color: #3a3A3a;
 }
 
@@ -84,7 +90,7 @@ button:hover {
     text-transform: uppercase;
 }
 
-input.task {
+.input-task {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -97,7 +103,7 @@ input.task {
     color: #888;
 }
 
-input.task:focus {
+.input-task:focus {
     color: #333;
 }
 
@@ -130,14 +136,14 @@ li>input[type="checkbox"] {
     margin: 0 10px;
 }
 
-li>label {
+li>.label-task {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
 
-li>input[type="text"] {
+li>.input-task {
     width: 226px
 }
 
@@ -152,21 +158,22 @@ li>input[type="text"] {
 }
 
 /* Completed */
-.compleate-task > li > .task {
+#compleate-task>li>.label-task,
+#compleate-task>li>.input-task {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+ul li .input-task {
     display: none
 }
 
-.edit-mode input[type=text] {
+.edit-mode .input-task {
     display: inline-block;
     width: 224px
 }
 
-.edit-mode label {
+.edit-mode .label-task {
     display: none;
 }
