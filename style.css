@@ -46,7 +46,7 @@
 .todo-task,
 .compleate-task {
     margin: 0;
-    padding: 0px;
+    padding: 0;
 }
 
 .todo-task__list,
@@ -166,15 +166,12 @@
 }
 
 /* Edit Task */
-.list-item .input-task {
+.list-item .input-task,
+.edit-mode .label-task {
     display: none
 }
 
 .edit-mode .input-task {
     display: inline-block;
     width: 224px
-}
-
-.edit-mode .label-task {
-    display: none;
 }
