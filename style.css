@@ -67,7 +67,7 @@
 .edit,
 .delete {
   background: none;
-  border: 0px;
+  border: 0;
   color: #888;
   font-size: 15px;
   width: 60px;
